@@ -123,11 +123,11 @@ function App() {
 
         <Footer
           activeTasksCount={activeTasksCount}
-          onClearCompleted={handleClearCompleted}
-        />
-      </section>
-    </section>
+              onClearCompleted={handleClearCompleted}
+        />    
+      </section>  
+    </section>   
   )
-}
+}    
 
 export default App
