@@ -124,9 +124,9 @@ function App() {
         <Footer
           activeTasksCount={activeTasksCount}
               onClearCompleted={handleClearCompleted}
-        />    
-      </section>  
-    </section>   
+        />       
+      </section>     
+    </section>        
   )
 }    
 
