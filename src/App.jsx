@@ -1,7 +1,6 @@
 import TaskList from './components/TaskList.jsx';
 import NewTaskForm from './components/NewTaskForm.jsx';
 import Footer from './components/Footer.jsx';
-import TasksFilter from './components/TasksFilter.jsx';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -105,11 +104,11 @@ function App() {
           onSaveTask={handleSaveTask}
         />
 
-        <TasksFilter filter={filter} onFilterChange={setFilter} />
-
         <Footer
           activeTasksCount={activeTasksCount}
           onClearCompleted={handleClearCompleted}
+          filter={filter}
+          onFilterChange={setFilter}
         />
       </section>
     </section>

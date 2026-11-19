@@ -1,33 +1,24 @@
+import TasksFilter from './TasksFilter';
+
 function Footer({
-    activeTasksCount = 0,
-    onClearCompleted = () => { },
+  activeTasksCount = 0,
+  onClearCompleted = () => {},
+  filter = 'All',
+  onFilterChange = () => {},
 }) {
-    return (
-        <footer className="footer">
-            <span className="todo-count">
-                <strong>{activeTasksCount}</strong> items left
-            </span>
+  return (
+    <footer className="footer">
+      <span className="todo-count">
+        <strong>{activeTasksCount}</strong> items left
+      </span>
 
-            <ul className="filters">
-                <li>
-                    <button className="selected">All</button>
-                </li>
-                <li>
-                    <button>Active</button>
-                </li>
-                <li>
-                    <button>Completed</button>
-                </li>
-            </ul>
+      <TasksFilter filter={filter} onFilterChange={onFilterChange} />
 
-            <button
-                className="clear-completed"
-                onClick={onClearCompleted}
-            >
-                Clear completed
-            </button>
-        </footer>
-    )
+      <button className="clear-completed" onClick={onClearCompleted}>
+        Clear completed
+      </button>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
